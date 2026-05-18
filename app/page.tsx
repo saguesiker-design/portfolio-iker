@@ -1,41 +1,36 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white p-10">
-      <section className="max-w-5xl mx-auto">
+    <main className="min-h-screen bg-black text-white">
 
-        <h1 className="text-6xl font-bold mb-4">
-          Iker Sagués Zafra
-        </h1>
+      <section className="max-w-6xl mx-auto px-6 py-32">
 
-        <p className="text-xl text-gray-400 mb-12">
-          Estudiante de CFGS y creador de proyectos digitales.
+        <p className="text-gray-400 mb-4">
+          Portfolio Digital
         </p>
 
-        <div className="grid gap-6">
+        <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-6">
+          Iker Sagués
+        </h1>
 
-          <div className="border border-gray-700 rounded-2xl p-6">
-            <h2 className="text-3xl font-semibold mb-2">
-              Portfolio Digital
-            </h2>
+        <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          Estudiante de CFGS y creador de proyectos digitales,
+          aplicaciones web y herramientas con inteligencia artificial.
+        </p>
 
-            <p className="text-gray-400">
-              Web creada con Next.js para mostrar proyectos digitales y habilidades.
-            </p>
-          </div>
+        <div className="flex gap-4">
 
-          <div className="border border-gray-700 rounded-2xl p-6">
-            <h2 className="text-3xl font-semibold mb-2">
-              Apps con IA
-            </h2>
+          <button className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80 transition">
+            Ver proyectos
+          </button>
 
-            <p className="text-gray-400">
-              Desarrollo de aplicaciones utilizando inteligencia artificial.
-            </p>
-          </div>
+          <button className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
+            Contacto
+          </button>
 
         </div>
 
       </section>
+
     </main>
   )
 }
