@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen text-white">
-      
+
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-zinc-800 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -42,9 +42,11 @@ export default function Home() {
             <a href="#projects" className="hover:text-blue-400 transition">
               Projects
             </a>
+
             <a href="#about" className="hover:text-blue-400 transition">
               About
             </a>
+
             <a href="#contact" className="hover:text-blue-400 transition">
               Contact
             </a>
@@ -68,20 +70,24 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap gap-4">
+
+          {/* BOTÓN VIEW PROJECTS */}
           <a
             href="#projects"
-            className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
+            className="bg-white px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
+            style={{ color: "black" }}
           >
             View Projects
           </a>
 
+          {/* BOTÓN CONTACT */}
           <a
-            href="https://github.com"
-            target="_blank"
+            href="#contact"
             className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition"
           >
-            GitHub
+            Contact Me
           </a>
+
         </div>
       </section>
 
@@ -164,8 +170,9 @@ export default function Home() {
         </p>
 
         <a
-          href="mailto:tuemail@gmail.com"
-          className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
+          href="mailto:sagues.iker@iesnautica.cat"
+          className="bg-white px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
+          style={{ color: "black" }}
         >
           Contact Me
         </a>
