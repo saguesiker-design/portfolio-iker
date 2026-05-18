@@ -6,43 +6,65 @@ export default function Home() {
     "GitHub",
     "Vercel",
     "OpenAI",
+    "Automation",
   ];
 
   const projects = [
     {
       title: "NautiChart Learn",
       description:
-        "Plataforma educativa para practicar navegación costera con cartas náuticas digitales e inteligencia artificial.",
+        "Plataforma educativa para navegación costera con cartas náuticas digitales interactivas.",
+      result: "Proyecto único dentro del sector marítimo.",
     },
     {
-      title: "Portfolio Digital",
+      title: "AI Automation",
       description:
-        "Portfolio profesional desarrollado con Next.js, desplegado en Vercel y conectado con GitHub.",
+        "Automatización de procesos empresariales usando inteligencia artificial.",
+      result: "Ahorro de tiempo y escalabilidad.",
     },
     {
-      title: "Future AI SaaS",
+      title: "Portfolio Platform",
       description:
-        "Próximo proyecto enfocado en automatización empresarial e inteligencia artificial escalable.",
+        "Portfolio profesional desarrollado con Next.js y desplegado en Vercel.",
+      result: "Marca personal digital.",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen text-white">
       
-      {/* HERO SECTION */}
-      <section className="max-w-6xl mx-auto px-6 py-32">
-        <p className="text-gray-400 mb-4">
-          Developer • AI • Maritime Innovation
+      {/* NAVBAR */}
+      <nav className="fixed top-0 w-full bg-black/70 backdrop-blur-lg border-b border-zinc-800 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="font-bold text-lg">Iker.dev</h1>
+
+          <div className="flex gap-6 text-sm">
+            <a href="#projects" className="hover:text-blue-400 transition">
+              Projects
+            </a>
+            <a href="#about" className="hover:text-blue-400 transition">
+              About
+            </a>
+            <a href="#contact" className="hover:text-blue-400 transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 pt-40 pb-24">
+        <p className="text-blue-400 mb-4">
+          AI Developer • Maritime Innovation • Automation
         </p>
 
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-          Building digital products with AI & maritime innovation
+          Building scalable digital products with AI
         </h1>
 
         <p className="text-xl text-gray-400 max-w-2xl mb-10">
-          Desarrollo aplicaciones web, automatizaciones y herramientas
-          enfocadas en inteligencia artificial, educación marítima y productos
-          digitales escalables.
+          Desarrollo productos digitales, automatización y soluciones
+          tecnológicas enfocadas en inteligencia artificial y sector marítimo.
         </p>
 
         <div className="flex flex-wrap gap-4">
@@ -50,14 +72,15 @@ export default function Home() {
             href="#projects"
             className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
           >
-            Ver proyectos
+            View Projects
           </a>
 
           <a
-            href="#contact"
+            href="https://github.com"
+            target="_blank"
             className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition"
           >
-            Contacto
+            GitHub
           </a>
         </div>
       </section>
@@ -68,21 +91,25 @@ export default function Home() {
         className="max-w-6xl mx-auto px-6 py-24"
       >
         <h2 className="text-4xl font-bold mb-12">
-          Proyectos Destacados
+          Featured Projects
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 transition duration-300"
+              className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-blue-500 transition duration-300"
             >
               <h3 className="text-2xl font-semibold mb-4">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-4">
                 {project.description}
+              </p>
+
+              <p className="text-blue-400 text-sm">
+                {project.result}
               </p>
             </div>
           ))}
@@ -92,7 +119,7 @@ export default function Home() {
       {/* TECH STACK */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <h2 className="text-4xl font-bold mb-12">
-          Tecnologías
+          Tech Stack
         </h2>
 
         <div className="flex flex-wrap gap-4">
@@ -108,16 +135,18 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section
+        id="about"
+        className="max-w-6xl mx-auto px-6 py-24"
+      >
         <h2 className="text-4xl font-bold mb-8">
-          Sobre mí
+          Why Work With Me?
         </h2>
 
         <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
-          Soy estudiante de CFGS y desarrollador de proyectos digitales.
-          Mi enfoque está en combinar desarrollo web, inteligencia artificial
-          y conocimientos del sector marítimo para crear soluciones diferentes
-          y con potencial real de negocio.
+          Combino desarrollo web, inteligencia artificial y conocimiento
+          marítimo para crear productos en nichos donde casi nadie está
+          innovando.
         </p>
       </section>
 
@@ -127,20 +156,18 @@ export default function Home() {
         className="max-w-6xl mx-auto px-6 py-24"
       >
         <h2 className="text-4xl font-bold mb-8">
-          Contacto
+          Let’s Build Something
         </h2>
 
         <p className="text-gray-400 mb-8 max-w-2xl">
-          Si quieres colaborar en proyectos web, automatización
-          o ideas relacionadas con inteligencia artificial,
-          puedes contactarme.
+          Si quieres colaborar en proyectos digitales, IA o automatización.
         </p>
 
         <a
           href="mailto:tuemail@gmail.com"
           className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80 transition"
         >
-          Envíame un email
+          Contact Me
         </a>
       </section>
 
